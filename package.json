@@ -1,0 +1,35 @@
+{
+  "name": "porfolio-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "npm-run-all build server",
+    "build": "npm-run-all clean transpile",
+    "server": "node ./dist/app",
+    "transpile": "babel ./src --out-dir ./dist",
+    "clean": "rimraf dist",
+    "test": "jest"
+  },
+  "author": "Aditya Pratama",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "7.10.3",
+    "@babel/core": "7.10.3",
+    "@babel/preset-env": "7.10.3",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "nodemailer": "6.4.10",
+    "npm-run-all": "4.1.5",
+    "rimraf": "3.0.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
